@@ -1,0 +1,17 @@
+.footer{
+    position: fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    background-color:darkslategrey;
+    color:white;
+    text-align:center;
+}
+
+.container-fluid1{
+    background-color: lightgrey;
+}
+
+.col-sm-8{
+    background-color:lightslategray
+}

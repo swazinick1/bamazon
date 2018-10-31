@@ -1,28 +1,36 @@
-const mysql2 = require('mysql2')
-const takeData = function(){
+$.ajax({
+    url:'/api/products',
+    method: 'GET'
+}).then(function(response){
+    for(let i = 0; i < response.length; i++){
+        let data = response[i];
+	$('#product-view').append(data.product);
+    }
+    console.log(response);
+});
 
-    // const data = Products;
-    // const queryURL = '';
-
-    $.ajax({
-        url: '/api/product',
-        method: 'GET'
-        
-    }).then(function(productList){
-
-       
-    });
-
- 
-}
-
-const postData = function (){
+$.ajax(
+{})
 
 
-    $.ajax({
-        url: '/api/product',
-        mathod: 'POST'
-    }).then(function(productList){
-        
-    })
-}
+
+// let product = {
+//     product,
+//     department,
+//     price,
+//     inStock
+// }
+
+// $.ajax({
+//     url: '/api/products',
+//     method: 'POST',
+//     data: product
+// }).then(function(response){
+//     console.log(response)
+// });
+
+// $.ajax({
+//     url: '/api/products/'
+//     method:
+
+// })
