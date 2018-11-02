@@ -23,14 +23,17 @@
           }
           res.json(response)
       })
-   })
+   });
+
+   router.get("/api/products/:id", function(req,res){
+	db.Products.findOne({where:{id:req.params.id}}).then(function(response, error){
+	
+	})
+
+})
    
 
-   router.get("/api/products/:id",function(req, res){
-    console.log("The route was triggered by the item with an id of " + req.params.id)
-    res.json("Hello World");
-    
-    })
+
    
    module.exports = router;
    
